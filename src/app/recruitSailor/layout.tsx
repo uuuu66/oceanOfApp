@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/Common/Header";
 import Section from "@/components/Section";
 import { PropsWithChildren } from "react";
 

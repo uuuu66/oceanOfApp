@@ -1,10 +1,10 @@
-"use client";
-import GlobalStyle from "@/styles/globalStyles";
+import Header from "@/components/Common/Header";
 
 export default function Home() {
   return (
-    <main>
-      hi <GlobalStyle />
-    </main>
+    <>
+      <Header />
+      <main></main>
+    </>
   );
 }

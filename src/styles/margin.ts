@@ -1,4 +1,4 @@
-import { headerSize } from "@/components/Header";
+import { headerSize } from "@/components/Common/Header";
 
 import { media } from "./screenSizes";
 
