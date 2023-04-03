@@ -1,9 +1,10 @@
-import Header from "@/components/Common/Header";
+import httpRequest from "@/networks/httpRequest";
 
 export default function Home() {
+  const list = httpRequest({ url: "/event-banners", method: "get" });
+  console.log(list);
   return (
     <>
-      <Header />
       <main></main>
     </>
   );

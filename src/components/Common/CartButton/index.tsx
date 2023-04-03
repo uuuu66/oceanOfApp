@@ -20,7 +20,7 @@ const CartButton: FunctionComponent<Props> = function CartButton({
     >
       <Image alt={alt} src="/Icon/cart.png" width={18} height={18} />
       {howMany > 0 ? (
-        <div className="absolute text-white flex items-center justify-center text-xs  rounded-full bg-black w-6 h-6 -top-2 -right-2">
+        <div className="absolute text-white flex items-center justify-center text-xs  rounded-full bg-black w-5 h-5 -top-2 -right-2 ">
           {howMany > 99 ? "99++" : howMany}
         </div>
       ) : null}

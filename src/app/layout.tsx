@@ -1,5 +1,6 @@
 import Header from "@/components/Common/Header";
 import Navigation from "@/components/Common/Navigation";
+import { navs } from "@/constants/stringsKor";
 import "@/styles/globalStyle.css";
 export const metadata = {
   title: "SeaOfEverything",
@@ -14,16 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header />
         {children}
-        <Navigation
-          navList={[
-            { to: "", name: "홈", iconSrc: "/Icon/Tab.png" },
-            { to: "", name: "구매하기", iconSrc: "/Icon/Tab.png" },
-            { to: "", name: "그리기", iconSrc: "/Icon/Tab.png" },
-            { to: "", name: "주문내역", iconSrc: "/Icon/Tab.png" },
-            { to: "", name: "내 정보", iconSrc: "/Icon/Tab.png" },
-          ]}
-        />
+        <Navigation navList={navs} />
       </body>
     </html>
   );

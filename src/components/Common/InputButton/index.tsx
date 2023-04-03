@@ -1,16 +1,16 @@
 import React from "react";
+import Input from "../Input";
 interface Props {
   onClick?: React.MouseEventHandler;
   placeholder?: string;
+  searchValue?: string;
 }
-export default function index({ onClick, placeholder }: Props) {
+export default function index({ onClick, placeholder, searchValue }: Props) {
   return (
     <div>
-      <input
-        className="h-8 px-5 rounded-md"
-        placeholder={placeholder || "검색"}
-        onClick={onClick}
-      ></input>
+      <Input placeholder={placeholder || "검색"} onClick={onClick}>
+        {searchValue || ""}
+      </Input>
     </div>
   );
 }
