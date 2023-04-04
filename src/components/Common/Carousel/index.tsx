@@ -1,6 +1,5 @@
 "use client";
 import CarouselCard from "@/components/Common/CarouselCard";
-import BannerCard from "@/components/Common/CarouselCard";
 import React, {
   Dispatch,
   FunctionComponent,
@@ -23,7 +22,7 @@ const Carousel: FunctionComponent<Props> = function Carousel({
   setIndex,
 }) {
   const [startPos, setStartPos] = useState(0);
-  const [offset, setOffset] = useState(window.screen.width * srcs.length);
+  const [offset, setOffset] = useState(window?.screen.width * srcs.length);
   const [curPos, setCurpos] = useState(0);
   const [isSwipe, setIsSwipe] = useState(false);
   const [isBlock, setIsBlock] = useState(false);

@@ -8,19 +8,9 @@ export default class Category {
   name: string;
 
   @Exclude()
-  imgsrc: string;
+  imgSrc: string;
 
   @Exclude()
   @Type(() => Category)
-  parentCategory: Category;
-
-  get getParent(): Category | null {
-    return this.parentCategory || null;
-  }
-  get getName(): string {
-    return this.name;
-  }
-  get getImgSrc(): string {
-    return this.imgsrc;
-  }
+  parentCategory?: Category;
 }
