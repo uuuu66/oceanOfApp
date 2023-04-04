@@ -20,21 +20,4 @@ export default class BannerEvent {
   linkTo?: string;
 
   constructor() {}
-
-  get getImgSrc() {
-    return this.imgSrc;
-  }
-
-  get getDate() {
-    return [this.from, this.to];
-  }
-
-  get getDescription() {
-    return this.description;
-  }
-
-  get getLinkTo() {
-    if (this.linkTo) return this.linkTo;
-    return undefined;
-  }
 }

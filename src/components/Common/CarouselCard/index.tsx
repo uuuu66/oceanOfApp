@@ -6,12 +6,12 @@ interface Props extends PropsWithChildren {
   src: string;
 }
 
-const BannerCard: FunctionComponent<Props> = function BannerCard({ src }) {
+const CarouselCard: FunctionComponent<Props> = function CarouselCard({ src }) {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-screen h-full relative flex-shrink-0 flex-grow">
       <Image
         src={src}
-        className={"w-full h-full "}
+        className={"w-screen h-full "}
         fill={true}
         alt="배너 이미지"
       />
@@ -19,4 +19,4 @@ const BannerCard: FunctionComponent<Props> = function BannerCard({ src }) {
   );
 };
 
-export default BannerCard;
+export default CarouselCard;

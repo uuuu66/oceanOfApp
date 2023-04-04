@@ -13,8 +13,8 @@ const BannerPagination: FunctionComponent<Props> = function BannerPagination({
   onClick,
 }) {
   return (
-    <div className="absolute right-1 bottom-1 rounded-lg bg-gray-400 opacity-50 text-xs flex justify-center items-center">
-      {`${currentIndex || 0}/${maxIndex || 0}`}
+    <div className="absolute right-1 -bottom-0 rounded-3xl py-1 px-2 bg-black opacity-75 text-xs flex justify-center items-center text-white">
+      {`${currentIndex || 0}/${maxIndex || 0} 이벤트 목록보기`}
     </div>
   );
 };
