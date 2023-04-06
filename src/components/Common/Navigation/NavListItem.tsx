@@ -17,9 +17,9 @@ export default function NavListItem({ iconSrc, name, to }: NavListItemProps) {
     <div
       onClick={onClick}
       style={{ flex: "1 1 20px" }}
-      className=" justify-center items-center flex flex-col gap-1"
+      className=" justify-center  items-center flex flex-col gap-1"
     >
-      <Image width={30} height={30} alt={name} src={iconSrc} />
+      <Image width={24} height={24} alt={name} src={iconSrc} />
       <span className="text-xs">{name}</span>
     </div>
   );

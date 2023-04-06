@@ -10,7 +10,7 @@ const CategoryCard: FunctionComponent<Props> = function CategoryCard({
 }) {
   return (
     <div className="px-2 py-2 flex flex-col gap-1 justify-center items-center relative">
-      <Image src={imgSrc} width={40} height={40} alt={name} />
+      <Image src={imgSrc} width={64} height={64} alt={name} />
 
       <div className="text-xs text-black">{name}</div>
     </div>

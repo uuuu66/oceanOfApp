@@ -6,7 +6,7 @@ interface Props {
 }
 export default function Navigation({ navList }: Props) {
   return (
-    <div className="flex justify-between items-center bottom-0 fixed px-2 py-2 gap-1 w-full shadow-inner">
+    <div className="fixed flex z-50 justify-between items-center bottom-0  px-2 py-2 gap-1 w-full shadow-inner">
       {navList.map((item) => (
         <NavListItem {...item} key={item.name} />
       ))}

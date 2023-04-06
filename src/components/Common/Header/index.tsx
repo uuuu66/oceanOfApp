@@ -17,7 +17,7 @@ const Header: FunctionComponent<Props> = function Header({ children }) {
   const [i, setI] = useState(0);
 
   return (
-    <div className="flex justify-between items-center flex-row w-full h-12 py-4 px-4 bg-red-500 fixed top-0">
+    <div className="flex z-50 justify-between items-center flex-row w-full h-12 py-4 px-4 bg-red-500 fixed top-0">
       <Logo />
       <div className="flex flex-nowrap gap-2 items-center justify-between">
         <Input />

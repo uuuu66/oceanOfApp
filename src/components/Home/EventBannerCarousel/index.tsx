@@ -1,5 +1,6 @@
 "use client";
 import Carousel from "@/components/Common/Carousel";
+import SectionContainer from "@/components/Common/Container/SectionContainer";
 import Title from "@/components/Common/Title";
 import BannerEvent from "@/models/BannerEvent";
 import React, { FunctionComponent, PropsWithChildren, useState } from "react";
@@ -14,8 +15,8 @@ const EventBannerCarousel: FunctionComponent<Props> =
     const [index, setIndex] = useState(bannerEvents.length);
 
     return (
-      <div className="flex flex-col justify-between gap-2">
-        <Title className="px-4">진행중인 이벤트</Title>
+      <SectionContainer>
+        <Title size="3xl">진행중인 이벤트</Title>
         <Carousel
           index={index}
           setIndex={setIndex}
@@ -26,7 +27,7 @@ const EventBannerCarousel: FunctionComponent<Props> =
             maxIndex={bannerEvents.length}
           />
         </Carousel>
-      </div>
+      </SectionContainer>
     );
   };
 

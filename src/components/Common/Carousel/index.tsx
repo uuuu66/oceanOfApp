@@ -48,14 +48,15 @@ const Carousel: FunctionComponent<Props> = function Carousel({
     setCurpos(0);
     setIsSwipe(false);
   };
+  console.log(index);
   useEffect(() => {
     setOffset((v) => window.screen.width * index);
-    if (index + 1 === 3) {
+    if (index === srcs.length - 1) {
       setTimeout(() => {
         setIsBlock(true);
       }, 100);
     }
-    if (index + 1 === 7) {
+    if (index === srcs.length * 2) {
       setTimeout(() => {
         setIsBlock(true);
       }, 100);
@@ -63,11 +64,11 @@ const Carousel: FunctionComponent<Props> = function Carousel({
   }, [index]);
   useEffect(() => {
     if (isBlock) {
-      if (index + 1 === 3) {
-        setIndex(index + 3);
+      if (index === srcs.length - 1) {
+        setIndex(index + srcs.length);
       }
-      if (index + 1 === 7) {
-        setIndex(index - 3);
+      if (index === srcs.length * 2) {
+        setIndex(index - srcs.length);
       }
       setTimeout(() => {
         setIsBlock(false);
@@ -80,7 +81,7 @@ const Carousel: FunctionComponent<Props> = function Carousel({
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
-        className={`inner flex w-screen h-full transition-transform ${
+        className={`inner flex w-full h-full transition-transform ${
           isBlock ? "duration-0" : "duration-100"
         }`}
         style={{
@@ -92,13 +93,13 @@ const Carousel: FunctionComponent<Props> = function Carousel({
         }}
       >
         {srcs.map((src, index) => (
-          <CarouselCard key={index} src={src} />
+          <CarouselCard key={index + "first" + src} src={src} />
         ))}
         {srcs.map((src, index) => (
-          <CarouselCard key={index} src={src} />
+          <CarouselCard key={index + "second" + src} src={src} />
         ))}
         {srcs.map((src, index) => (
-          <CarouselCard key={index} src={src} />
+          <CarouselCard key={index + "third" + src} src={src} />
         ))}
       </div>
       {children}

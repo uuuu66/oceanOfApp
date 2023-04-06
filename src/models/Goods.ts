@@ -12,6 +12,8 @@ export default class Goods {
   @Type(() => Status)
   status: Status[];
 
+  description?: string;
+
   imgSrcs: string[];
   constructor() {}
 }
